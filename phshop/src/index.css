@@ -1,0 +1,351 @@
+body {
+  margin: 0;
+  bottom: 0;
+  background: #333;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  animation: gradientAnimation 10s ease infinite;
+  justify-content: center;
+
+  overflow-x: hidden;
+}
+p {
+  font-size: 30px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+}
+
+.phone_item {
+  transition: 0.3s;
+
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: calc((100% - (22% * 4)) / 3);
+  padding: 10px;
+
+  width: 22%;
+  min-height: 50vh;
+
+  background: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px 0px black;
+
+  color: #333;
+}
+
+.phone_item:hover {
+  transition: 0.3s;
+
+  transform: translateY(-10px);
+}
+
+.cart_items,
+.catalog {
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: calc((100% - (22% * 4)) / 3);
+
+  width: 94vw;
+
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+.phone_item img {
+  width: 90%;
+  height: 70%;
+}
+
+.item_interface {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  width: 100%;
+}
+
+.add_to_cart_btn {
+  transition: 0.3s;
+
+  width: 100%;
+  height: 6vh;
+
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: #333;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.add_to_cart_btn:hover {
+  transition: 0.3s;
+
+  scale: 1.03;
+}
+
+.filter_interface {
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: auto;
+
+  margin: 0 20px;
+
+  box-sizing: border-box;
+}
+
+.filter {
+  width: 20%;
+  height: 6vh;
+
+  outline: none;
+  background: white;
+  border: none;
+  border-radius: 10px;
+
+  color: #333;
+}
+
+.filter option {
+  border: none;
+  outline: none;
+  background: white;
+
+  color: #333;
+}
+
+.catalog {
+  margin-top: 2vh;
+}
+
+.item_interface h3 {
+  width: 60%;
+  margin: 0;
+}
+
+.item_interface .remoove {
+  transition: 0.3s;
+
+  height: 6vh;
+  width: 100%;
+
+  background: transparent;
+  border-radius: 5px;
+  border: 2px solid brown;
+
+  color: brown;
+
+  cursor: pointer;
+}
+
+.item_interface .remoove:hover {
+  transition: 0.3s;
+
+  scale: 1.03;
+  color: white;
+}
+
+.product_info {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 5vh auto;
+  padding: 10px;
+
+  width: 94vw;
+
+  background: white;
+  border-radius: 10px;
+
+  box-sizing: border-box;
+}
+
+.product_info .info {
+  display: flex;
+
+  flex-direction: column;
+
+  width: 70%;
+
+  gap: 20px;
+}
+
+.product_info img {
+  height: 40vh;
+}
+
+.product_info p,
+.product_info h2 {
+  text-align: left;
+  margin: 0;
+}
+
+.product_info p {
+  font-size: 1.2em;
+}
+
+.product_info * {
+  color: #333;
+}
+
+.order_product {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+.price {
+  font-size: 1.4em !important;
+}
+
+.order_product button {
+  transition: 0.3s;
+
+  height: 7vh;
+  width: 30%;
+
+  border: 2px solid #333;
+  border-radius: 10px;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 1em;
+
+  cursor: pointer;
+}
+
+.order_product button:hover {
+  transition: 0.3s;
+
+  scale: 1.03;
+  font-size: 1.1em;
+}
+
+@media (max-width: 1000px) and (min-width: 800px) {
+  .phone_item {
+    margin-top: calc((100% - 30% * 3) / 2);
+    width: 30%;
+  }
+
+  .cart_items,
+  .catalog {
+    gap: calc((100% - 30% * 3) / 2);
+  }
+
+  .filter {
+    width: 30%;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 500px) {
+  .phone_item {
+    margin-top: calc(100% - 45% * 2);
+    width: 45%;
+  }
+
+  .cart_items,
+  .catalog {
+    gap: calc(100% - 45% * 2);
+  }
+
+  .filter {
+    width: 40%;
+  }
+
+  .item_interface button {
+    width: 40%;
+  }
+}
+
+@media (max-width: 500px) and (min-width: 100px) {
+  .filter {
+    width: 50%;
+  }
+
+  .cart_items,
+  .catalog {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phone_item {
+    margin-top: 20px;
+    width: 90%;
+    min-height: none;
+    height: auto;
+  }
+
+  .phone_item img {
+    height: 70%;
+  }
+
+  .phone_item h3 {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 0;
+  }
+
+  .item_interface {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .item_interface .remoove {
+    width: 100%;
+  }
+
+  .product_info {
+    flex-direction: column-reverse;
+
+    gap: 20px;
+  }
+
+  .product_info h2 {
+    text-align: center;
+  }
+
+  .product_info p {
+    text-align: center;
+    font-size: 1em;
+  }
+
+  .product_info img {
+    width: 80%;
+    height: auto;
+  }
+
+  .order_product button {
+    width: 50%;
+  }
+}
+
+@media (max-width: 300px) and (min-width: 100px) {
+  .phone_item h3 {
+    font-size: 1.6em;
+  }
+}

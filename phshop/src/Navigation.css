@@ -1,0 +1,92 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f7f7f7; /* Цвет фона */
+  color: #fff; /* Цвет текста */
+  padding: 10px; /* Внутренний отступ */
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.nav-title {
+  text-align: center;
+  font-size: 24px; /* Настройте размер шрифта по вашему выбору */
+  font-weight: bold;
+  display: flex;
+  color: #333;
+  margin: 0;
+}
+
+.navigation a {
+  transition: 0.3s;
+
+  font-size: 1.2em;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  background-image: linear-gradient(#333, #333);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 3px;
+
+  color: #333;
+}
+
+.navigation a:hover {
+  transition: 0.3s;
+
+  background-size: 100% 3px;
+}
+
+.nav_head {
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  transition: 0.3s;
+
+  display: flex;
+
+  align-self: center;
+  gap: 20px;
+
+  margin-right: 5vw;
+  transform: translateY(0);
+}
+
+.burger {
+  display: none;
+
+  width: 8vw;
+  height: 8vw;
+
+  cursor: pointer;
+}
+
+@media (max-width: 500px) and (min-width: 100px) {
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navigation:not(.active) {
+    transition: 0.3s;
+
+    transform: translateY(-50vh);
+  }
+
+  .navigation a {
+    font-size: 1.1em;
+  }
+
+  .burger {
+    display: block;
+    margin-right: 8vw;
+  }
+}
